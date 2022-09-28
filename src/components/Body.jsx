@@ -23,7 +23,7 @@ const Body = () => {
             </div>
         </div>
 
-
+{/* second column */}
         
         <div className='m-10 mt-20 '>
             <h3 className='mt-5 font-semibold  text-orange-500 text-2xl'>SNEAKER COMPANY</h3>

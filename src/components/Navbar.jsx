@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className=' container flex  justify-between items-center mx-auto border-b-2 border-black-500 '>
      
-      <ul className="flex mt-6">
+       <ul className="flex mt-6">
         <li className="mr-6 ml-32 mb-10">
           <a className="font-bold text-4xl" href="#">sneakers</a>
         </li>
