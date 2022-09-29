@@ -1,6 +1,11 @@
 import React from 'react'
 import { BsCart } from 'react-icons/Bs'
+import cartStore from '../store';
+
 const Navbar = () => {
+
+
+  const cart = cartStore((state) => state.cart) ;
   return (
     <div className=' container flex  justify-between items-center mx-auto border-b-2 border-black-500 '>
      
@@ -28,7 +33,7 @@ const Navbar = () => {
       <div className='flex'>
         <div className='mt-2'><BsCart />  
         </div>
-        <h1 className='bg-orange-400 px-1.5 text-white  rounded-full '>1</h1>
+        <h1 className='bg-orange-400 px-1.5 text-white  rounded-full '>{cart}</h1>
       </div>
     </div>
   )

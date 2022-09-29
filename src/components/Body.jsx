@@ -3,9 +3,14 @@ import blue from '../assets/blue.jpeg'
 import green from '../assets/green.jpeg'
 import red from '../assets/red.jpeg'
 import white from '../assets/white.jpeg'
+import cartStore from '../store';
 
 
 const Body = () => {
+
+    const increase = cartStore((state)=> state.increase)
+    const decrease = cartStore((state)=> state.decrease)
+    const cart = cartStore((state) => state.cart) ;
 
     
   return (
@@ -34,10 +39,10 @@ const Body = () => {
             <h1 className='mt-10 font-bold text-3xl'>$125</h1>
 
 <div className='flex flex-row mt-10'>
-    <button className='bg-lime-300 w-10 h-10 text-red-600 text-3xl'>-</button>
-    <h1 className='bg-lime-300 w-10 text-3xl  text-center '>0</h1>
-    <button className='bg-lime-300 w-10 h-10 text-red-600 text-3xl'>+</button>
-    <button  className='ml-8 bg-orange-300 w-60 h-10 text-white shadow-2xl'>Add to cart</button>
+    <button onClick={decrease} className='bg-lime-300 w-10 h-10 text-red-600 text-3xl'>-</button>
+    <h1 className='bg-lime-300 w-10 text-3xl  text-center '>{cart}</h1>
+    <button onClick={increase} className='bg-lime-300 w-10 h-10 text-red-600 text-3xl'>+</button>
+    <button   className='ml-8 bg-orange-300 w-60 h-10 text-white shadow-2xl'>Add to cart</button>
 </div>
 
         </div>
