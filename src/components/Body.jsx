@@ -6,6 +6,8 @@ import white from '../assets/white.jpeg'
 
 
 const Body = () => {
+
+    
   return (
     <>
     <div className='flex flex-row'>
